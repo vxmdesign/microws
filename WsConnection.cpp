@@ -121,6 +121,7 @@ int WsConnection::sendMessage(WsMessage *pMsg){
       header[1] = 126;
       header[2] = (len >> 8) & 0xFF;
       header[3] = (len & 0xFF);
+      txlen = 4;
     }
   }else{
     header[1] = len;

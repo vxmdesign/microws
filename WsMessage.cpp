@@ -19,6 +19,10 @@ const unsigned char *WsMessage::getData(){
   return mData;
 }
 
+std::string WsMessage::getString(){
+  return std::string((char*)mData);
+}
+
 unsigned char WsMessage::opcode(){
   return mOp;
 }

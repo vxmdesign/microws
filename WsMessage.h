@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <malloc.h>
-
+#include <string>
 #define DEFAULT_MSG_SIZE 128
 
 class WsMessage{
@@ -13,6 +13,7 @@ class WsMessage{
   int size();
   unsigned char opcode();
   const unsigned char *getData();
+  std::string getString();
   void insertData(const unsigned char *pData, int pLen);
   unsigned char *insertData(int pLen);
  private:

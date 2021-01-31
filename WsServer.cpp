@@ -101,7 +101,7 @@ int WsServer::writeHandShake(int pCsock,  const char *pSecKey){
   const char magic[] = "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
   char l4[256];
   char sha[20];
-  char key[256];
+  char key[200];
   int n;
   strcpy(key, pSecKey);
   n = strlen(key);
