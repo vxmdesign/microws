@@ -20,6 +20,7 @@ const unsigned char *WsMessage::getData(){
 }
 
 std::string WsMessage::getString(){
+  mData[mLen] = '\0';
   return std::string((char*)mData);
 }
 
